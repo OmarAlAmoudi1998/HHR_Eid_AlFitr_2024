@@ -43,10 +43,10 @@
         h3 {
             font-family: 'Cairo';
             font-size: 50px;
-            color: #000000;
+            color: #FFFFFF;
             text-align: right;
             position: absolute;
-            bottom: 3%;
+            bottom: 1%;
             left: 50%;
             transform: translate(-50%, -50%);
         }
@@ -110,7 +110,7 @@
                 alert("يجب عليك ادخال اسمك في مربع النص")
             } else {
                 var image_htmlString = '<div><img class="MyImg" src="./design2.jpg">' +
-                    '<h3 style="left:50%;bottom:3%" id=\'name\'>' + name + '</h3></div>';
+                    '<h3 style="left:50%;bottom:1%" id=\'name\'>' + name + '</h3></div>';
                 var tempDiv = document.createElement('div');
                 tempDiv.setAttribute("id", "html-content-holder")
                 document.body.appendChild(tempDiv);
