@@ -109,7 +109,7 @@
             if (name == "" || name == " ") {
                 alert("يجب عليك ادخال اسمك في مربع النص")
             } else {
-                var image_htmlString = '<div><img class="MyImg" src="./design3.jpg">' +
+                var image_htmlString = '<div><img class="MyImg" src="./design4.jpg">' +
                     '<h3 style="left:50%;bottom:0%" id=\'name\'>' + name + '</h3></div>';
                 var tempDiv = document.createElement('div');
                 tempDiv.setAttribute("id", "html-content-holder")
@@ -124,7 +124,7 @@
                             var newData = imageData.replace(/^data:image\/png/, "data:application/octet-stream");
                             var tmp = document.createElement('a');
                             tmp.setAttribute('href', newData);
-                            tmp.setAttribute('download', "eid_" + name + ".png");
+                            tmp.setAttribute('download', "ramadan_" + name + ".png");
                             tmp.style.display = 'none';
                             document.body.appendChild(tmp);
                             tmp.click();
