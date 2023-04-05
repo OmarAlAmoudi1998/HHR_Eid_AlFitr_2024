@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <title>رمضان مبارك</title>
+    <title>عيد سعيد</title>
     <link rel="icon" href="favicn.png" type="image/png" sizes="16x16">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
@@ -46,7 +46,7 @@
             color: #FFFFFF;
             text-align: right;
             position: absolute;
-            bottom: 0%;
+            bottom: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
         }
@@ -83,9 +83,8 @@
             <p style="text-align:center;">
                 <b style=font-size:200%;>بطاقة تهنئة</b>
             </p>
-            <p style="text-align:center;"><small style=font-size:120%>مبارك عليكم حلول شهر رمضان المبارك, أعاده الله
-                    علينا وعليكم بالخير والبركات</small></p>
-            <p style="text-align:center;"><small style=font-size:100%>يمكنكم الحصول على كرت تهنئة بشهر رمضان بأسمكم من
+            <p style="text-align:center;"><small style=font-size:120%>نهنئكم بحلول عيد الفطر المبارك ، تقبل الله منا ومنكم صالح الأعمال وكل عام وانتم بخير</small></p>
+            <p style="text-align:center;"><small style=font-size:100%>يمكنكم الحصول على كرت تهنئة عيد الفطر بأسمكم من
                     هنا</small></p>
         </div>
 
@@ -109,8 +108,8 @@
             if (name == "" || name == " ") {
                 alert("يجب عليك ادخال اسمك في مربع النص")
             } else {
-                var image_htmlString = '<div><img class="MyImg" src="./design4.jpg">' +
-                    '<h3 style="left:50%;bottom:0%" id=\'name\'>' + name + '</h3></div>';
+                var image_htmlString = '<div><img class="MyImg" src="./eid1.png">' +
+                    '<h3 style="left:50%;bottom:50%" id=\'name\'>' + name + '</h3></div>';
                 var tempDiv = document.createElement('div');
                 tempDiv.setAttribute("id", "html-content-holder")
                 document.body.appendChild(tempDiv);
