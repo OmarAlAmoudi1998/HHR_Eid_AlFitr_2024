@@ -2,14 +2,11 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <title>عيد سعيد</title>
-    <link rel="icon" href="favicn.png" type="image/png" sizes="16x16">
+    <title>رمضان مبارك</title>
+    <link rel="icon" href="logo white.png" type="image/png" sizes="16x16">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alexandria&display=swap" rel="stylesheet">
     <meta property="og:title" content="صمم بطاقة معايدة بإسمك" />
     <meta property="og:type" content="website" />
     <meta property=”og:image” content=”OG.jpg” />
@@ -44,15 +41,14 @@
         }
 
         h3 {
-            font-family: 'Cairo', sans-serif;
-            font-size: 30px;
+            font-family: 'Cairo';
+            font-size: 70px;
             color: #FFFFFF;
+            text-align: center;
             position: absolute;
-            text-align:center;
-            letter-spacing:normal;
-            bottom: 40%;
-            left: 30%;
-            /*transform: translate(-130%, 5%);*/
+            bottom: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
         .MyImg {
@@ -74,7 +70,7 @@
         }
     </style>
     <meta charset="utf-8">
-    <title>عيد سعيد</title>
+    <title>عيد أضحى مبارك</title>
 
 </head>
 
@@ -85,10 +81,11 @@
                 <img src="hhrlogo.png" alt="Avatar" class="avatar" width="374" height="276" class="responsive">
             </p>
             <p style="text-align:center;">
-                <b style=font-size:200%;>بطاقة تهنئة</b>
+                <b style=font-size:200%;>بطاقة معايدة</b>
             </p>
-            <p style="text-align:center;"><small style=font-size:120%>نهنئكم بحلول عيد الأضحى المبارك ، تقبل الله منا ومنكم صالح الأعمال وكل عام وانتم بخير</small></p>
-            <p style="text-align:center;"><small style=font-size:100%>يمكنكم الحصول على كرت تهنئة عيد الأضحى بأسمكم من
+            <p style="text-align:center;"><small style=font-size:120%>مبارك عليكم حلول شهر رمضان المبارك, أعاده الله
+                    علينا وعليكم بالخير والبركات</small></p>
+            <p style="text-align:center;"><small style=font-size:100%>يمكنكم الحصول على كرت تهنئة رمضان بأسمكم من
                     هنا</small></p>
         </div>
 
@@ -103,7 +100,7 @@
         <button onclick="getCard()">عرض التهنئة</button>
     </p>
 
-    <p style="text-align:center;"></p>
+    <p style="text-align:center;">Programmed by: Viemzyy - Design by: Mohammed</p>
 
     <script>
         function getCard() {
@@ -113,7 +110,7 @@
                 alert("يجب عليك ادخال اسمك في مربع النص")
             } else {
                 var image_htmlString = '<div><img class="MyImg" src="./eidadha3.png">' +
-                    '<h3>' + name + '</h3></div>';
+                    '<h3 style="left:50%;bottom:25%" id=\'name\'>' + name + '</h3></div>';
                 var tempDiv = document.createElement('div');
                 tempDiv.setAttribute("id", "html-content-holder")
                 document.body.appendChild(tempDiv);
