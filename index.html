@@ -48,7 +48,7 @@
             font-size: 30px;
             color: #FFFFFF;
             position: absolute;
-            text-align:center;
+            
             letter-spacing:normal;
             bottom: 40%;
             left: 30%;
@@ -113,7 +113,7 @@
                 alert("يجب عليك ادخال اسمك في مربع النص")
             } else {
                 var image_htmlString = '<div><img class="MyImg" src="./eidadha3.png">' +
-                    '<h3>' + name + '</h3></div>';
+                    '<h3 style="text-align:right;">' + name + '</h3></div>';
                 var tempDiv = document.createElement('div');
                 tempDiv.setAttribute("id", "html-content-holder")
                 document.body.appendChild(tempDiv);
