@@ -124,6 +124,8 @@
                     html2canvas(tempDiv, {
                         onrendered: function (canvas) {
                             getCanvas = canvas;
+                            canvas.setAttribute('direction', 'rtl');
+                            canvas.textAlign = 'right';
                             //$('#imageCol').html(getCanvas);
                             var imageData = getCanvas.toDataURL("image/png");
                             var newData = imageData.replace(/^data:image\/png/, "data:application/octet-stream");
