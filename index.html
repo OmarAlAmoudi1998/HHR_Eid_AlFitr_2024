@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-
-<html lang="en" dir="rtl">
+<html lang="en" dir="ltr">
 
 <head>
     <title>رمضان مبارك</title>
-    <link rel="icon" href="hhrlogo.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="logo white.png" type="image/png" sizes="16x16">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta property="og:title" content="صمم بطاقة معايدة بإسمك" />
@@ -43,16 +41,13 @@
         }
 
         h3 {
-            display: block;
-           text-align: justify;
-           direction: rtl;
             font-family: 'Cairo';
-            font-size: 30px;
+            font-size: 70px;
             color: #FFFFFF;
+            text-align: right;
             position: absolute;
-            /*bottom: 70%;
-            left: 50%;*/
-            
+            bottom: 25%;
+            left: 50%;
             transform: translate(-50%, -50%);
         }
 
@@ -75,7 +70,7 @@
         }
     </style>
     <meta charset="utf-8">
-    <title>عيد أضحى مبارك</title>
+    <title>رمضان مبارك</title>
 
 </head>
 
@@ -105,7 +100,7 @@
         <button onclick="getCard()">عرض التهنئة</button>
     </p>
 
-    <p style="text-align:center;"></p>
+    
 
     <script>
         function getCard() {
@@ -124,8 +119,6 @@
                     html2canvas(tempDiv, {
                         onrendered: function (canvas) {
                             getCanvas = canvas;
-                            canvas.setAttribute('direction', 'rtl');
-                            canvas.textAlign = 'right';
                             //$('#imageCol').html(getCanvas);
                             var imageData = getCanvas.toDataURL("image/png");
                             var newData = imageData.replace(/^data:image\/png/, "data:application/octet-stream");
