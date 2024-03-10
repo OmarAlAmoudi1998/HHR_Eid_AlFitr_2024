@@ -71,6 +71,7 @@
                     html2canvas(tempDiv, {
                         imageTimeout: 15000, //newline
                         scale:3, //newline
+                        useCORS: true,
                         onrendered: function (canvas) {
                             getCanvas = canvas;
                             canvas.setAttribute('direction', 'rtl');
