@@ -50,8 +50,8 @@
             font-size: 30px;
             color: #FFFFFF;
             position: absolute;
-            /*bottom: 65%;
-            left: 20%;*/
+            /*bottom: 70%;
+            left: 50%;*/
             
             transform: translate(-50%, -50%);
         }
@@ -105,7 +105,7 @@
         <button onclick="getCard()">عرض التهنئة</button>
     </p>
 
-    <p style="text-align:center;">Programmed by: Viemzyy - Design by: Mohammed</p>
+    <p style="text-align:center;"></p>
 
     <script>
         function getCard() {
@@ -114,8 +114,8 @@
             if (name == "" || name == " ") {
                 alert("يجب عليك ادخال اسمك في مربع النص")
             } else {
-                var image_htmlString = '<div><img class="MyImg" src="./eidadha3.png">' +
-                    '<h3 style="left:427px;top:598px" id=\'name\'>' + name + '</h3></div>';
+                var image_htmlString = '<div><img class="MyImg" src="./ramadan2024.png">' +
+                    '<h3 style="left:540px;top:700px" id=\'name\'>' + name + '</h3></div>';
                 var tempDiv = document.createElement('div');
                 tempDiv.setAttribute("id", "html-content-holder")
                 document.body.appendChild(tempDiv);
