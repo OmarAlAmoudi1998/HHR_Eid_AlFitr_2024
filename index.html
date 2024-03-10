@@ -69,6 +69,8 @@
                 setTimeout(function () {
                     tempDiv.innerHTML = image_htmlString;
                     html2canvas(tempDiv, {
+                        imageTimeout: 15000, //newline
+                        scale:3, //newline
                         onrendered: function (canvas) {
                             getCanvas = canvas;
                             canvas.setAttribute('direction', 'rtl');
