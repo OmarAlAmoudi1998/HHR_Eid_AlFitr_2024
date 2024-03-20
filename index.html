@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <title>رمضان مبارك</title>
+    <title>عيد فطر سعيد</title>
     <link rel="icon" href="hhrlogo.png" type="image/png" sizes="16x16">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
@@ -42,7 +42,18 @@
 
         h3 {
             font-family: 'Cairo';
-            font-size: 30px;
+            font-size: 50px;
+            color: #8f724e;
+            text-align: right;
+            position: absolute;
+            /*bottom: 25%;
+            left: 50%;*/
+            transform: translate(-50%, -50%);
+        }
+
+     .second {
+            font-family: 'Cairo';
+            font-size: 50px;
             color: #FFFFFF;
             text-align: right;
             position: absolute;
@@ -50,6 +61,9 @@
             left: 50%;*/
             transform: translate(-50%, -50%);
         }
+		
+		
+		
 
         .MyImg {
             width: auto;
@@ -70,7 +84,7 @@
         }
     </style>
     <meta charset="utf-8">
-    <title>رمضان مبارك</title>
+    <title>عيد فطر سعيد</title>
 
 </head>
 
@@ -83,34 +97,46 @@
             <p style="text-align:center;">
                 <b style=font-size:200%;>بطاقة معايدة</b>
             </p>
-            <p style="text-align:center;"><small style=font-size:120%>مبارك عليكم حلول شهر رمضان المبارك, أعاده الله
+            <p style="text-align:center;"><small style=font-size:120%>مبارك عليكم حلول عيد الفطر المبارك, أعاده الله
                     علينا وعليكم بالخير والبركات</small></p>
-            <p style="text-align:center;"><small style=font-size:100%>يمكنكم الحصول على كرت تهنئة رمضان بأسمكم من
-                    هنا</small></p>
+            <p style="text-align:center;"><small style=font-size:100%>يمكنكم الحصول على كرت تهنئة عيد الفطر بإسمكم من هنا</small></p>
+			
+			<p style="text-align:center;"><small style=font-size:100%>ملاحظة : يوجد مقاسين للتهنئة ، بعد كتابة الاسم اضغط على الزر للمقاس المراد
+			</small></p>
+			
         </div>
 
         <div class="container">
             <p style="text-align:center;">
+				
+				
+				
                 <input id="input" type="text" placeholder="اسمك هنا" name="uname" required>
                 <label for="uname"><b style=font-size:100%>ادخل اسمك</b></label>
             </p>
         </div>
     </form>
     <p style="text-align:center;">
-        <button onclick="getCard()">عرض التهنئة</button>
+        <button id="button" onclick="getCard()"  >مقاس ستوري</button>
+		<button id="button" onclick="getCard2()"  >مقاس مربع</button>
     </p>
 
     
 
     <script>
+
+	
+	
         function getCard() {
             name = document.getElementById("input").value;
+
 
             if (name == "" || name == " ") {
                 alert("يجب عليك ادخال اسمك في مربع النص")
             } else {
-                var image_htmlString = '<div><img class="MyImg" src="./ramadan2024.png">' +
-                    '<h3 style="left:540px;top:700px" id=\'name\'>' + name + '</h3></div>';
+			
+                var image_htmlString = '<div><img class="MyImg" src="./eidstory.png">' +
+                    '<h3 style="left:560px;top:1050px" id=\'name\'>' + name + '</h3></div>' + '<h3 class="second" style="left:560px;top:1045px" id=\'name\'>' + name + '</h3></div>';
                 var tempDiv = document.createElement('div');
                 tempDiv.setAttribute("id", "html-content-holder")
                 document.body.appendChild(tempDiv);
@@ -131,10 +157,50 @@
                             document.body.removeChild(tmp);
                             document.body.removeChild(tempDiv);
                         }
+						
                     });
                 }, 10);
+				
             }
         }
+		
+		function getCard2() {
+            name = document.getElementById("input").value;
+
+
+            if (name == "" || name == " ") {
+                alert("يجب عليك ادخال اسمك في مربع النص")
+            } else {
+			
+                var image_htmlString = '<div><img class="MyImg" src="./eidsquare.png">' +
+                    '<h3 style="left:540px;top:660px;font-size:40px" id=\'name\'>' + name + '</h3></div>' + '<h3 class="second" style="left:540px;top:658px;font-size:40px" id=\'name\'>' + name + '</h3></div>';
+                var tempDiv = document.createElement('div');
+                tempDiv.setAttribute("id", "html-content-holder")
+                document.body.appendChild(tempDiv);
+                setTimeout(function () {
+                    tempDiv.innerHTML = image_htmlString;
+                    html2canvas(tempDiv, {
+                        onrendered: function (canvas) {
+                            getCanvas = canvas;
+                            //$('#imageCol').html(getCanvas);
+                            var imageData = getCanvas.toDataURL("image/png");
+                            var newData = imageData.replace(/^data:image\/png/, "data:application/octet-stream");
+                            var tmp = document.createElement('a');
+                            tmp.setAttribute('href', newData);
+                            tmp.setAttribute('download', "eid_" + name + ".png");
+                            tmp.style.display = 'none';
+                            document.body.appendChild(tmp);
+                            tmp.click();
+                            document.body.removeChild(tmp);
+                            document.body.removeChild(tempDiv);
+                        }
+						
+                    });
+                }, 10);
+				
+            }
+        }
+		
     </script>
 
 </body>
